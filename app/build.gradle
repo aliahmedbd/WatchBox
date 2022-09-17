@@ -19,8 +19,19 @@ android {
 
     buildTypes {
         release {
+            buildConfigField "String", "BASE_URL", '"https://www.omdbapi.com/"'
+            buildConfigField "String", "API_KEY", '"b8bf491"'
+
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "String", "BASE_URL", '"https://www.omdbapi.com/"'
+            buildConfigField "String", "API_KEY", '"b8bf491"'
+        }
+        stagging {
+            buildConfigField "String", "BASE_URL", '"https://www.omdbapi.com/"'
+            buildConfigField "String", "API_KEY", '"b8bf491"'
         }
     }
     compileOptions {
